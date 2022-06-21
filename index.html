@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>八音盒</title>
+<script src="vue2.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<style type="text/css">
+  .el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }  
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 280px;
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+</style>
+</head>
+<body>
+<div id="app">
+<el-container>
+<el-header>焯</el-header>
+<el-main>
+<el-button type="primary" id="wo">我</el-button><audio id="w" src="我.mp3"></audio>
+<el-button type="success" id="chao">焯</el-button><audio id="c" src="焯.mp3"></audio>
+<el-button type="danger" id="wochao">我焯</el-button><audio id="wc" src="我焯.mp3"></audio>
+<el-button type="danger" id="chaowo">超我</el-button><audio id="cw" src="超我.mp3"></audio>
+<el-button type="danger" id="A">A 口区 口区</el-button><audio id="aou" src="A 口区 口区.mp3"></audio>
+<el-button type="danger" id="ou">口区口区口区口区口区</el-button><audio id="ouq" src="口区.mp3"></audio><br/>
+<el-button type="danger" id="j">鸡</el-button><audio id="ji" src="鸡.mp3"></audio>
+<el-button type="danger" id="n">你</el-button><audio id="ni" src="你.mp3"></audio>
+<el-button type="danger" id="t">太</el-button><audio id="tai" src="太.mp3"></audio>
+<el-button type="danger" id="m">美</el-button><audio id="mei" src="美.mp3"></audio>
+<el-button type="danger" id="jntm">鸡你太美</el-button><audio id="jintm" src="鸡你太美.mp3"></audio>
+</el-main>
+<el-footer>口区</el-footer>
+</el-container>
+</div>
+</body>
+<script type="text/javascript">
+var a = new Vue({
+	el:'#app',
+	data: function(){
+		return {visible: false}
+	}
+})
+$('#wo').click(
+	function() {
+		$('#w')[0].play();
+});
+$('#chao').click(
+	function() {
+		$('#c')[0].play();
+});
+$('#wochao').click(
+	function() {
+		$('#wc')[0].play();
+});
+$('#chaowo').click(
+	function() {
+		$('#cw')[0].play();
+});
+$('#A').click(
+	function() {
+		$('#aou')[0].play();
+});
+$('#ou').click(
+	function() {
+		setInterval(function() {
+			$('#ouq')[0].play();
+		},0);
+});
+$('#j').click(
+	function() {
+		$('#ji')[0].play();
+});
+$('#n').click(
+	function() {
+		$('#ni')[0].play();
+});
+$('#t').click(
+	function() {
+		$('#tai')[0].play();
+});
+$('#m').click(
+	function() {
+		$('#mei')[0].play();
+});
+$('#jntm').click(
+	function() {
+		$('#jintm')[0].play();
+});
+</script>
+</html>
